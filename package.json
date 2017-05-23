@@ -8,11 +8,14 @@
   "homepage": "https://github.com/ramonvictor/easy-handlebars-js/",
   "repository": "ramonvictor/easy-handlebars-js",
   "scripts": {
-    "start": ""
+    "test": "mocha --ui tdd"
   },
   "dependencies": {
     "handlebars": "^4.0.10"
   },
   "engines": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "jsdom": "^8.2.0",
+    "mocha": "^2.4.5"
+  }
 }

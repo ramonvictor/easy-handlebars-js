@@ -28,7 +28,7 @@ function getTemplate(name) {
   return {
     render: function(data) {
       var template = (cached[name].use || cached[name].compile());
-      return template(data || {});
+      return template(data || {}).trim('');
     }
   }
 }
