@@ -1,4 +1,6 @@
 # easy-handlebars-js
+[![npm version](https://badge.fury.io/js/easy-handlebars-js.svg)](https://badge.fury.io/js/easy-handlebars-js)
+
 Easy to memorize API to render handlebars templates.
 
 ## Usage
