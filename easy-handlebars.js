@@ -1,20 +1,20 @@
 'use strict';
 /*
- * Easy to memorize API to render handlebars templates.
+ * Easy to memorize API to compile handlebars templates on client-side.
  * @module easy-handlebars
  */
 var Handlebars = require('handlebars');
 var cached = {};
 /**
- * @typedef {Object} RenderAPI
- * @property {function} render
+ * @typedef {Object} CompileAPI
+ * @property {function} compile
  */
 
 /**
  * Get handlebars template.
  * @public
  * @param {string} name
- * @returns {RenderAPI}
+ * @returns {CompileAPI}
  */
 function getTemplate(name) {
   if (!cached.hasOwnProperty(name)) {
@@ -26,7 +26,7 @@ function getTemplate(name) {
   }
 
   return {
-    render: function(data) {
+    compile: function(data) {
       var template = (cached[name].use || cached[name].compile());
       return template(data || {}).trim('');
     }
