@@ -12,10 +12,31 @@ Add your template(s) using script tag:
 ```
 
 Then, on JavaScript:
+
 ```js
 const easyHandlebars = require('easy-handlebars');
 
 easyHandlebars('my-template').render({
   title: 'Hi there!'
+});
+```
+## Why `easyHandlebars` is simpler?
+Check the following comparison:
+
+**easyHandlebars API**
+```js
+let renderedTmpl = easyHandlebars('my-template').render({
+  title: 'Hi there!'
+});
+```
+
+**The native Handlebars way**
+```js
+let templateEl = document.querySelector('#my-template');
+let templateHtml = templateEl.innerHTML;
+let template = Handlebars.compile(templateHtml);
+
+let renderedTmpl = template({
+  title: 'Hi there!'
 });
 ```
