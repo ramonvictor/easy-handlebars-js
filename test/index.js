@@ -8,7 +8,7 @@ global.document  = require('jsdom').jsdom(html)
 global.window    = document.defaultView
 document.scripts = document.querySelectorAll('script');
 
-test('has scripts', () => {
+test('Has document.scripts', () => {
     let scripts = document.scripts || [];
     t.equal(scripts.length, 2);
 })
@@ -20,14 +20,14 @@ test('Undefined template name', () => {
 })
 
 test('Greetings template', () => {
-    let tmpl = easyHandlebars('greetings').render({
+    let tmpl = easyHandlebars('greetings').compile({
         title: 'Hi!'
     });
     t.equal(tmpl, '<h1>Hi!</h1>');
 })
 
 test('Thanks template', () => {
-    let tmpl = easyHandlebars('thank-you').render({
+    let tmpl = easyHandlebars('thank-you').compile({
         title: 'Thank you!'
     });
     t.equal(tmpl, '<h1 class="success">Thank you!</h1>');

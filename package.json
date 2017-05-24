@@ -1,9 +1,9 @@
 {
   "name": "easy-handlebars-js",
   "author": "@ramonvictor",
-  "description": "Easy to memorize API to render handlebars templates.",
+  "description": "Easy to memorize API to compile handlebars templates on client-side.",
   "license": "MIT",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "easy-handlebars.js",
   "homepage": "https://github.com/ramonvictor/easy-handlebars-js/",
   "repository": "ramonvictor/easy-handlebars-js",
