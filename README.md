@@ -20,7 +20,7 @@ easyHandlebars('my-template').render({
   title: 'Hi there!'
 });
 ```
-## Why `easyHandlebars` is simpler?
+## Why is `easyHandlebars` simpler?
 Check the following comparison:
 
 **easyHandlebars API**
