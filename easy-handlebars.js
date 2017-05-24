@@ -21,7 +21,7 @@ function getTemplate(name) {
     findTemplates();
 
     if (!cached.hasOwnProperty(name)) {
-      throw new Error('easy-handlebars: could not find template ' + name);
+      throw new Error('easy-handlebars: could not find template "' + name + '"');
     }
   }
 

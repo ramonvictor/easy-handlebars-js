@@ -13,6 +13,12 @@ test('has scripts', () => {
     t.equal(scripts.length, 2);
 })
 
+test('Undefined template name', () => {
+    const name = 'successful-mesage'
+    let message = 'easy-handlebars: could not find template "' + name + '"';
+    t.throws(() => easyHandlebars(name), message);
+})
+
 test('Greetings template', () => {
     let tmpl = easyHandlebars('greetings').render({
         title: 'Hi!'
